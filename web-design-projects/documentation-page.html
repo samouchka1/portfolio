@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --nav-font-color: rgb(0, 0, 0);
+            --nav-bg-color: rgb(165, 165, 165);
+        }
+
+        body {
+            background-color: rgb(51, 51, 51);
+        }
+
+        #navbar {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            height: 100%;
+            width: 20%;
+            color: var(--nav-font-color);
+            font-size: 2rem;
+            background-color: var(--nav-bg-color);
+            justify-content: space-evenly;
+            text-align: center;
+            border: solid;
+        }
+
+            #navbar header {
+                font-family: sans-serif;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+                @media (max-width: 1600px){
+                #navbar header {
+                    font-size: 1.5rem;
+                }
+            }
+
+            #navbar a {
+                color: var(--nav-font-color);
+                text-decoration: none;
+            }
+
+                #navbar a:hover {
+                    color: var(--nav-bg-color);
+                    background-color: var(--nav-font-color);
+                    /* padding: 0.8rem;
+                    border-radius: 25px; */
+                    transition: 0.6s;
+                }
+
+        #main-doc {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background-color: rgb(51, 51, 51);
+        }
+
+        .main-section {
+            margin-left: 22%;
+            padding: 2rem;
+        }
+
+            .main-section header {
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+
+                .main-section code {
+                    font-size: 1.25rem;
+                }
+
+    </style>
+</head>
+<body>
+    <nav id="navbar"> <!--NAVBAR-->
+        <header>Topic of Documentation</header>
+        <a class="nav-link" href="#topic_1">Topic 1</a>
+        <a class="nav-link" href="#topic_2">Topic 2</a>
+        <a class="nav-link" href="#topic_3">Topic 3</a>
+        <a class="nav-link" href="#topic_4">Topic 4</a>
+        <a class="nav-link" href="#topic_5">Topic 5</a>
+    </nav>
+
+    <main id="main-doc"> <!--MAIN-->
+        <ul><section class="main-section" id="topic_1"><header>Topic 1</header>
+            <li><p>topic 1 sub-text</p></li>
+            <code>code: x = 1 + 1</code>
+            <p>topic1 main-text</p></section></ul>
+
+        <ul><section class="main-section" id="topic_2"><header>Topic 2</header>
+            <li><p>topic 2 sub-text</p></li>
+            <code>code: x = 2 + 2</code>
+            <p>topic2 main-text</p></header></section></ul>
+
+        <ul><section class="main-section" id="topic_3"><header>Topic 3</header>
+            <li><p>topic 3 sub-text</p></li>
+            <code>code: x = 3 + 3</code>
+            <p>topic3 main-text</p></header></section></ul>
+
+        <ul><section class="main-section" id="topic_4"><header>Topic 4</header>
+            <li><p>topic 4 sub-text</p></li>
+            <code>code: x = 4 + 4</code>
+            <p>topic4 main-text</p></header></section></ul>
+
+        <ul><section class="main-section" id="topic_5"><header>Topic 5</header>
+            <li><p>topic 5 sub-text</p></li>
+            <code>code: x = 5 + 5</code>
+            <p>topic5 main-text</p></header></section></ul>
+    </main>
+    
+</body>
+</html>
