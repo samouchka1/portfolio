@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap" rel="stylesheet">
 
-    <title>Miguel's Portfolio</title>
+    <title>Maurizio's Portfolio</title>
     <style>
 
         html {
@@ -27,10 +27,14 @@
             left: 0;
             right: 0;
             top: 0;
-            width: 100%;
             justify-content: right;
-            background: linear-gradient(to right, rgb(34, 0, 92), rgb(82, 63, 119), rgb(191, 180, 207));
+            background: linear-gradient(to right, rgb(34, 0, 92), rgb(84, 66, 121), rgb(191, 180, 207));
         }
+            @media (max-width: 60rem) {
+                #navbar {
+                    background: linear-gradient(to right, rgb(84, 66, 121), rgb(191, 180, 207));
+                }
+            }
 
             .nav-link {
                 padding: 1.3rem;
@@ -42,6 +46,14 @@
                 font-weight: 600;
             }
 
+                @media (max-width: 60rem) {
+                    .nav-link {
+                        font-size: 1.4rem;
+                        padding: .5rem;
+                        color: rgb(34, 0, 92);
+                    }
+                }
+
                 .nav-link:hover {
                     color: rgb(191, 180, 207);
                     background-color: rgb(34, 0, 92);
@@ -50,18 +62,30 @@
                 }
 
         #welcome-section { /*WELCOME*/
-            margin-top: 25rem;
-            height: 100vh; /* vh = 1% size of viewport (height)*/
+            margin-top: 32rem;
+            height: 90vh; /* vh = 1% size of viewport (height)*/
             text-align: center;
             font-size: 2rem;
             font-family: 'Monda', sans-serif;
             color: rgb(185, 253, 121);
         }
+            @media (max-width: 75rem){
+                #welcome-section {
+                    font-size: 1.3rem;
+                    height: 75vh;
+                }
+            }
+
             h3 {
                 padding: 1rem;
                 margin: 0 40rem 0 40rem;
             }
-                @media (max-width: 1100px){
+                @media (max-width: 98rem){
+                    h3 {
+                        margin: 0 25rem 0 25rem;
+                    }
+                }
+                @media (max-width: 75rem){
                     h3 {
                         margin: auto;
                     }
@@ -71,8 +95,9 @@
                 border-radius: 40px 0 40px 0;
                 color: rgb(0, 43, 134);
                 transition: .5s;
-            }
-        
+            }    
+
+
         #about {
             border: solid; /*temp*/
             margin: 5rem 5rem 10rem 5rem;
@@ -84,12 +109,25 @@
             font-size: 1.3rem;
             font-family: sans-serif;
         }
+            @media (max-width: 75rem){
+                #about {
+                    margin: .5rem;
+                    padding: 1rem;
+                }
+            }
+
             #about img {
                 height: 15rem;
                 width: 20rem;
                 float: left;
                 margin: .5rem 1.5rem .5rem .5rem;
             }
+                @media (max-width: 75rem){
+                    #about img {
+                    margin: .5rem .5rem .5rem 1.3rem;
+                    float: none;
+                    }
+                }
 
         .project-tile { /*PROJECTS*/
             display: grid;
@@ -103,10 +141,11 @@
             font-family: sans-serif;
         }
 
-            @media (max-width: 1100px){
+            @media (max-width: 45rem){ /*This needs work*/
                 .project-tile{
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-columns: 1fr;
+                    font-size: 1.5rem;
+                    margin: 4rem 1rem 4rem 1rem;
                 }
             }
             
@@ -170,6 +209,12 @@
                 text-align: center;
                 border-radius: 10px;
             }
+                @media (max-width: 45rem){
+                    #profile-link {
+                        grid-column: unset; /*important!*/
+                    }
+                }
+
                 #profile-link:hover {
                     animation-name: zoom;
                     animation-duration: 1s;
@@ -194,6 +239,8 @@
         <h1>Greetings, I'm Maurizio.</h1>
         <h3>Professional Web Developer</h3>
     </section>
+
+    <div id="ball"></div>
 
     <section id="about">
         <h1>About me</h1>
