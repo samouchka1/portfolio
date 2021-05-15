@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey form project.</p>
+    <div class="form">
+        <form id="survey-form" action="#"><!--dont forget method="POST"-->
+            <label for="name" id="name-label">Name <input type="text" placeholder="Enter name" id="name" required></label><br> <!--NAME-->
+            <label for="email" id="email-label">Email <input type="email" placeholder="Enter email" required id="email"></label><br><!--EMAIL dont forget name=""-->
+            <label for="number" id="number-label">Age <input type="number" placeholder="Enter age" min="10" max="100" id="number" required></label><br><!--NUMBER-->
+            <label for="dropdown"><!--DROPDOWN-->
+                <select name="dropdown" id="dropdown">
+                    <option value="something">something</option>
+                    <option value="something2">something2</option>
+                </select></label><br>
+            <label for="radio"><input type="radio" name="first-second" value="first">first</label><!--RADIO INPUT-->
+            <label for="radio"><input type="radio" name="first-second" value="second">second</label><br>
+            <label for="checkbox"><input type="checkbox" value="check1">check1</label><br><!--CHECKBOX INPUT-->
+            <label for="checkbox"><input type="checkbox" value="check2">check2</label><br>
+            <label for="comments"><textarea name="comments" id="comments" cols="30" rows="7" placeholder="Comments"></textarea></label><br><!--TEXTAREA-->
+            <label for="button"><button type="submit" id="submit">Submit</button></label><br>
+        </form>
+    </div>
+</body>
+</html>
