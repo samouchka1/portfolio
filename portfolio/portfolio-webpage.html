@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap" rel="stylesheet">
+
+    <title>M's Portfolio</title>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url(portfolio-bg.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        #navbar { /*NAVBAR*/
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            justify-content: right;
+            background: linear-gradient(to right, rgb(34, 0, 92), rgb(84, 66, 121), rgb(191, 180, 207));
+        }
+            @media (max-width: 60rem) {
+                #navbar {
+                    background: linear-gradient(to right, rgb(84, 66, 121), rgb(191, 180, 207));
+                }
+            }
+
+            .nav-link {
+                padding: 1.3rem;
+                margin: 2rem;
+                text-decoration: none;
+                color:rgb(34, 0, 92);
+                font-size: 1.6rem;
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+
+                @media (max-width: 60rem) {
+                    .nav-link {
+                        font-size: 1.4rem;
+                        padding: .5rem;
+                        color: rgb(34, 0, 92);
+                    }
+                }
+
+                .nav-link:hover {
+                    color: rgb(191, 180, 207);
+                    background-color: rgb(34, 0, 92);
+                    border-radius: 40px 0 40px 0;
+                    transition: 1s;
+                }
+
+        #welcome-section { /*WELCOME*/
+            margin-top: 32rem;
+            height: 90vh; /* vh = 1% size of viewport (height)*/
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Monda', sans-serif;
+            color: rgb(185, 253, 121);
+        }
+            @media (max-width: 75rem){
+                #welcome-section {
+                    font-size: 1.3rem;
+                    height: 75vh;
+                }
+            }
+
+            h3 {
+                padding: 1rem;
+                margin: 0 40rem 0 40rem;
+            }
+                @media (max-width: 98rem){
+                    h3 {
+                        margin: 0 25rem 0 25rem;
+                    }
+                }
+                @media (max-width: 75rem){
+                    h3 {
+                        margin: auto;
+                    }
+                }
+            h3:hover {
+                background-color: rgba(255, 255, 255, 0.137);
+                border-radius: 40px 0 40px 0;
+                color: rgb(0, 43, 134);
+                transition: .5s;
+            }    
+
+
+        #about {
+            border: solid; /*temp*/
+            margin: 5rem 5rem 10rem 5rem;
+            background-color: rgba(128, 128, 128, 0.671);
+            box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.247);
+            color: black;
+            padding: 3rem 8rem 3rem 8rem;
+            border-radius: 40px 0 40px 0;
+            font-size: 1.3rem;
+            font-family: sans-serif;
+        }
+            @media (max-width: 75rem){
+                #about {
+                    margin: .5rem;
+                    padding: 1rem;
+                }
+            }
+
+            #about img {
+                height: 15rem;
+                width: 20rem;
+                float: left;
+                margin: .5rem 1.5rem .5rem .5rem;
+            }
+                @media (max-width: 75rem){
+                    #about img {
+                    margin: .5rem .5rem .5rem 1.3rem;
+                    float: none;
+                    }
+                }
+
+        .project-tile { /*PROJECTS*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            align-content: center;
+            margin: 3rem;
+            gap: 1rem;
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+            @media (max-width: 45rem){ /*This needs work*/
+                .project-tile{
+                    grid-template-columns: 1fr;
+                    font-size: 1.5rem;
+                    margin: 4rem 1rem 4rem 1rem;
+                }
+            }
+            
+        .project-tile a {
+            text-decoration: none;
+            color: black;
+            }
+            
+            #project1 {
+                padding: 2.5rem;
+                background-color: cornflowerblue;
+                text-align: center;
+                border-radius: 10px;
+            }
+                #project1:hover {
+                    animation-name: zoom;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                    @keyframes zoom {
+                        0% { transform: scale(1.0035);}
+                        100% { transform: scale(1.05);}
+                    }
+
+            #project2 {
+                padding: 2.5rem;
+                background-color: crimson;
+                text-align: center;
+                border-radius: 10px;
+            }
+                #project2:hover {
+                    animation-name: zoom;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                    @keyframes zoom {
+                        0% { transform: scale(1.0035);}
+                        100% { transform: scale(1.05);}
+                    }
+
+            #project3 {
+                padding: 2.5rem;
+                background-color: darkgoldenrod;
+                text-align: center;
+                border-radius: 10px;
+            }
+                #project3:hover {
+                    animation-name: zoom;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                    @keyframes zoom {
+                        0% { transform: scale(1.0035);}
+                        100% { transform: scale(1.05);}
+                    }
+
+            #profile-link {
+                grid-column: 2/3;
+                padding: 2.5rem;
+                background-color: rgb(173, 120, 223);
+                text-align: center;
+                border-radius: 10px;
+            }
+                @media (max-width: 45rem){
+                    #profile-link {
+                        grid-column: unset; /*important!*/
+                    }
+                }
+
+                #profile-link:hover {
+                    animation-name: zoom;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                    @keyframes zoom {
+                        0% { transform: scale(1.0035);}
+                        100% { transform: scale(1.05);}
+                    }
+
+    </style>
+
+</head>
+<body>
+    <nav id="navbar"> <!--NAVBAR-->
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#profile-link">Work</a>
+        <a class="nav-link" href="">Contact</a>
+    </nav>
+
+    <section id="welcome-section"> <!--WELCOME-->
+        <h1>Greetings, I'm M.</h1>
+        <h3>Professional Web Developer</h3>
+    </section>
+
+    <div id="ball"></div>
+
+    <section id="about">
+        <h1>About me</h1>
+        <img src="portoflio-about.jpg" alt="about image">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laboriosam, repudiandae eveniet est eos
+             odit veniam quos magni dolor tempore deserunt, omnis cupiditate, perspiciatis quas autem? Esse quaerat porro
+              error tenetur! Esse necessitatibus voluptas nisi ducimus perferendis, quasi odit hic nulla suscipit similique,
+               soluta sunt fugit in iure! Voluptate vel animi accusantium rem neque alias rerum dolor aspernatur! Ut 
+               consequuntur laudantium, nihil aliquid beatae maiores, saepe nobis incidunt ducimus laborum error aperiam quibusdam
+                officia minus itaque laboriosam in quae hic eaque delectus? Quaerat ullam placeat, fuga quia, vero cum ad rerum
+                 nobis illum quasi fugiat harum. Id, odio deleniti ipsum laboriosam hic, minus ducimus facere assumenda, error
+                  sint dolorem. Hic a accusamus temporibus facere architecto, cupiditate sapiente labore illum aliquam, sint, ex ea!
+                   Optio a aliquid, cum asperiores autem sed earum tempore quas ea quisquam enim atque explicabo modi, nobis ex expedita.
+                    Nulla voluptates odit aliquam libero? Cum, ipsum nulla. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                     Illum fugiat quasi sit ex nobis deleniti debitis corporis sunt modi, repellendus itaque aspernatur nemo iusto
+                      recusandae illo. Eaque, consequuntur hic enim vero veritatis, assumenda alias sapiente a totam rem praesentium
+                       at fuga? At ipsam reiciendis quae perferendis voluptatem natus suscipit vel provident eaque placeat vitae tempore
+                        quo et reprehenderit sequi eius cum, asperiores esse sint dignissimos expedita aperiam porro harum quasi. Itaque
+                         temporibus consequuntur labore placeat accusamus animi soluta repellendus vel deserunt ad voluptate tempora
+                          ducimus aut debitis voluptas amet, dolores accusantium delectus officiis perferendis vero quos sapiente molestiae
+                           hic? Obcaecati. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quasi eaque aliquam debitis
+                            numquam et quia eveniet in tempore recusandae veritatis saepe voluptatum accusantium voluptate culpa, eum</p>
+    </section>
+
+    <section id="projects"><!--PROJECTS-->
+        <div class="project-tile">
+            <a id="project1" href="/web-design-projects/form/form-project.html" target="_blank">Form Project</a>
+            <a id="project2" href="/web-design-projects/doc-page/documentation-page.html" target="_blank">Documentation Page</a>
+            <a id="project3" href="/web-design-projects/product-landing/product-landing.html" target="_blank">Product Landing</a>
+            <a id="profile-link" href="https://github.com/samouchka1" target="_blank">Github "samouchka"</a>
+        </div>
+    </section>
+
+</body>
+</html>
