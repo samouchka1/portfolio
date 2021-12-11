@@ -128,6 +128,8 @@
             }
 
         #about-content {
+            display: flex;
+            flex-direction: row;
             margin: .7rem 0 .7rem 0;
             background-color: rgb(56, 11, 99);
             /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(45,23,75,1) 35%, rgba(56,11,99,1) 74%); */
@@ -140,17 +142,69 @@
             transition: .5s;
         }
 
+            @media (max-width: 45rem) {
+                #about-content{
+                    flex-direction: column;
+                    /* align-items: center; */
+                }
+            }
+
         #about-text {
-            margin: 3rem 2rem 2rem 2rem;
+            position: relative;
+            top: 10%;
+            left: 10%;
+            width: 46%;
+            /* margin: 2rem; */
             color: white;
+            font-size: 1.5rem;
             display: none;
         }
+            @media (max-width: 60rem) {
+                #about-text {
+                    font-size: 1.2rem;
+                    left: -1%;
+                }
+            }
+
             @media (max-width: 45rem) {
-                .about-text {
+                #about-text {
+                    top: 3%;
+                    left: 10%;
+                    width: 75%;
                     margin: .5rem;
+                    font-size: 1rem;
                     /* height: 90vh; */
                 }
             }
+
+    #about-image {
+        position: relative;
+        display: none; /*param*/
+        top: 5%;
+        left: 10%;
+        height: 70%;
+        width: 27vw;
+        border-radius: 50%;
+        padding: 3rem;
+    }
+        @media (max-width: 60rem) {
+            #about-image {
+                /* top: 5%; */
+                left: 0;
+                height: 60%;
+                width: 35vw;
+            }
+        }
+
+        @media (max-width: 45rem) {
+            #about-image {
+                top: 4%;
+                left: 19%;
+                height: 45%;
+                width: 50vw;
+                padding: 1rem;
+            }
+        }
 
         #close-btn {
             position: relative;
@@ -176,6 +230,9 @@
                         left: 48%;
                     }
                 }
+
+    
+            
 /*=============================================================================================================================*/
 
         .project-tile { /*PROJECTS*/
@@ -318,12 +375,12 @@
 
     <div id="about-content">
         <button id="close-btn"></button>
-        <!-- <img src="portoflio-about.jpg" alt="about image"> -->
+        <img src="about-image.jpg" id="about-image" alt="about image">
         <p id="about-text">
             Thank you for stopping by! I like to develop functional, responsive websites. I am intrigued by anything related with web development and coding.
             At first, it became just a hobby but I quickly found myself fascinated by the complex nature of it all; the massive scope of
-             web development provides plenty of room to grow, a never-ending challenge. Always looking forward to a new project to
-             tackle. Let me help your business grow. Professional, timely and honest.
+            web development provides plenty of room to grow, a never-ending challenge. Always looking forward to a new project to
+            tackle. Let me help your business grow. <br> <br>Professional, timely and honest.
         </p>
     </div>
 
@@ -342,18 +399,20 @@
 
         const aboutContent = document.getElementById("about-content");
         const aboutText = document.getElementById("about-text");
+        const aboutImage = document.getElementById("about-image");
 
         const openBtn = document.getElementById("open-btn");
         openBtn.addEventListener("click", openAbout);
 
         function openAbout() {
-            aboutContent.style.height = "60vh";
+            aboutContent.style.height = "88vh";
             aboutContent.style.backgroundColor = "rgb(56, 11, 99)";
             closeBtn.style.display = "block";
             openBtn.style.display = "none";
 
             setTimeout(function(){
-            aboutText.style.display = "block"}, 350)
+            aboutText.style.display = "block",
+            aboutImage.style.display = "block"}, 350)
         }
 
         const closeBtn = document.getElementById("close-btn");
@@ -366,6 +425,7 @@
             openBtn.style.display = "block";
 
             aboutText.style.display = "none";
+            aboutImage.style.display = "none";
         }
 
     </script>
