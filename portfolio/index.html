@@ -178,7 +178,7 @@
                     left: 10%;
                     width: 75%;
                     margin: .5rem;
-                    font-size: 1rem;
+                    font-size: 1.15rem;
                     /* height: 90vh; */
                 }
             }
@@ -191,7 +191,8 @@
         height: 34vh;
         width: 18%;
         border-radius: 50%;
-        padding: 2rem;
+        margin: 2rem;
+        box-shadow: rgb(173, 173, 173) 1px 1px 7px;
     }
         /* @media (max-width: 68rem) {
             #about-image {
@@ -206,7 +207,7 @@
                 left: 7%;
                 height: 30vh;
                 width: 22%;
-                padding: 2rem 1rem 1rem 1rem;
+                margin: 2rem 1rem 1rem 1rem;
             }
         }
 
@@ -214,10 +215,10 @@
             @media (max-width: 45rem) {
                 #about-image {
                     top: 4%;
-                    left: 30%;
-                    height: 24vh;
-                    width: 34%;
-                    padding: 1rem;
+                    left: 27%;
+                    height: 25vh;
+                    width: 38%;
+                    margin: 1.4rem 1rem 1.4rem 1rem;
                 }
             }
 
@@ -363,7 +364,7 @@
                         100% { transform: scale(1.05);}
                     }
             
-        #signature {text-align: center; font-size: .9rem; color: rgb(10, 33, 77); margin: 1rem;}
+        #signature {text-align: center; font-size: .9rem; color: rgb(56, 11, 99); margin: 1rem;}
         
     </style>
 
@@ -392,10 +393,8 @@
         <button id="close-btn"></button>
         <img src="about-image.jpg" id="about-image" alt="about image">
         <p id="about-text">
-            Thank you for stopping by! I like to develop functional, responsive websites. I am intrigued by anything related with web development and coding.
-            At first, it became just a hobby but I quickly found myself fascinated by the complex nature of it all; the massive scope of
-            web development provides plenty of room to grow, a never-ending challenge. Always looking forward to a new project to
-            tackle. Let me help your business grow. <br> <br>Professional, timely and honest.
+            Thank you for stopping by!<br> <br> I like to develop functional, responsive websites. Always looking forward to a new project to
+            tackle. Let me help your business grow. <br> <br>Professional and reliable.
         </p>
     </div>
 
@@ -420,7 +419,7 @@
         openBtn.addEventListener("click", openAbout);
 
         function openAbout() {
-            aboutContent.style.height = "75vh";
+            aboutContent.style.height = "71vh";
             aboutContent.style.backgroundColor = "rgb(13, 40, 90)";
             closeBtn.style.display = "block";
             openBtn.style.display = "none";
