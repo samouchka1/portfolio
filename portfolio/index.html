@@ -255,7 +255,7 @@
             /* grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr); */
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 2fr);
+            grid-template-rows: repeat(5, 2fr);
             justify-content: center;
             /* align-items: center; */
             margin: 0;
@@ -335,24 +335,64 @@
                     }
                 }
 
+            #project4 {
+                grid-column: 1;
+                grid-row: 3/5;
+                padding: 6rem;
+                background-image: url(project-images/php-crud.jpg);
+                background-size: cover;
+                background-position-y: 51%;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                opacity: .9;
+            }
+                @media (max-width: 65rem) { #project4 {background-position-x: 10%;}}
+                @media (max-width: 55rem) {
+                    #project4 {
+                        grid-column: 1;
+                        grid-row: 9/12;
+                    }
+                }
+
             #work-link {
-                grid-column: 2/3;
-                /* grid-row: 4/8; */
+                grid-column: 2;
+                grid-row: 3/5;
                 padding: 2.5rem;
                 background-image: url(project-images/github.jpg);
                 background-size: cover;
-                background-position-y: 18%;
+                /* background-position-y: 18%; */
                 text-align: center;
                 color: white;
                 opacity: .9;
             }
                 @media (max-width: 55rem){
                     #work-link {
-                        grid-column: unset; /*important!*/
+                        grid-column: 1; /*was unset - important*/
+                        grid-row: 15/18
+                    }
+                }
+
+
+            #project5 {
+                grid-column: 3;
+                grid-row: 3/5;
+                padding: 6rem;
+                background-image: url(project-images/php-login.jpg);
+                background-size: cover;
+                background-position-y: 51%;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                opacity: .9;
+            }
+                @media (max-width: 65rem) { #project5 {background-position-x: 10%;}}
+                @media (max-width: 55rem) {
+                    #project5 {
+                        grid-column: 1;
+                        grid-row: 12/15;
                     }
                 }
             
-                #project1:hover, #project2:hover, #project3:hover, #work-link:hover {
+                #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #work-link:hover {
                     opacity: 1;
                     animation-name: zoom;
                     animation-duration: 1s;
@@ -402,6 +442,8 @@
             <a id="project1" href="https://samouchka1.github.io/model-site/model-site/index.html" target="_blank">Model site</a>
             <a id="project2" href="https://samouchka1.github.io/dragon-site/dragon-site/index.html" target="_blank">Dragon theme</a>
             <a id="project3" href="http://samouchka.great-site.net/index.php" target="_blank">PHP Components site</a>
+            <a id="project4" href="https://crudproject.great-site.net/index.php" target="_blank">PHP CRUD App</a>
+            <a id="project5" href="https://loginsystem.great-site.net/" target="_blank">PHP Login System</a>
             <a id="work-link" href="https://github.com/samouchka1" target="_blank">Github</a>
         </div>
     </section>
