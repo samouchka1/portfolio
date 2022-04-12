@@ -137,8 +137,6 @@
             flex-direction: row;
             margin: .7rem 0 .7rem 0;
             background-color: var(--portfolio-blue);
-            /* background-color: rgb(56, 11, 99); */
-            /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(45,23,75,1) 35%, rgba(56,11,99,1) 74%); */
             height: 0;/*param*/
             width: 100%;
             /* color: black; */
@@ -248,12 +246,10 @@
 
     
             
-/*=============================================================================================================================*/
+/*======================================================================================================================PROJECTS-TILE*/
 
         .project-tile { /*PROJECTS*/
             display: grid;
-            /* grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr); */
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(5, 2fr);
             justify-content: center;
@@ -265,12 +261,11 @@
             font-family: sans-serif;
         }
 
-            @media (max-width: 60rem){ /*This needs work*/
+            @media (max-width: 55rem){ 
                 .project-tile{
                     grid-template-columns: 1fr;
                     grid-template-rows: 2fr;
                     margin: 1rem 0 0 0;
-                    /* margin:1rem; */
                 }
             }
             
@@ -327,7 +322,7 @@
                 color: rgb(255, 255, 255);
                 opacity: .9;
             }
-                @media (max-width: 65rem) { #project3 {background-position-x: 10%;}}
+                @media (max-width: 55rem) { #project3 {background-position-x: 10%;}}
                 @media (max-width: 55rem) {
                     #project3 {
                         grid-column: 1;
@@ -347,7 +342,7 @@
                 text-shadow: 1px 1px 16px white; /*text shadow*/
                 opacity: .9;
             }
-                @media (max-width: 65rem) { #project4 {background-position-x: 40%;}}
+                @media (max-width: 55rem) { #project4 {background-position-x: 40%;}}
                 @media (max-width: 55rem) {
                     #project4 {
                         grid-column: 1;
@@ -366,9 +361,11 @@
                 color: white;
                 opacity: .9;
             }
+
+                /* @media (max-width: 55rem) { #work-link {background-position-x: 60%;}} */
                 @media (max-width: 55rem){
                     #work-link {
-                        grid-column: 1; /*was unset - important*/
+                        grid-column: 1; 
                         grid-row: 15/18
                     }
                 }
@@ -380,13 +377,13 @@
                 padding: 6rem;
                 background-image: url(project-images/php-login.jpg);
                 background-size: cover;
-                background-position-y: 60%;
+                background-position-y: 51%;
                 text-align: center;
                 color: rgb(0, 0, 0);
                 text-shadow: 1px 1px 16px white; /*text shadow*/
                 opacity: .9;
             }
-                @media (max-width: 65rem) { #project5 {background-position-x: 60%;}}
+                @media (max-width: 55rem) { #project5 {background-position-x: 60%;}}
                 @media (max-width: 55rem) {
                     #project5 {
                         grid-column: 1;
