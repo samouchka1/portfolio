@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap" rel="stylesheet">
+
+    <title>MyPortfolio</title>
+    <style>
+        :root {
+            --portfolio-blue: rgb(10, 33, 77);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #navbar { /*NAVBAR*/
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: 100%;
+            justify-content: right;
+            align-items: center;
+            background: var(--portfolio-blue);
+            /* background-color: rgb(56, 11, 99); */
+            /* background: linear-gradient(90deg, rgba(77, 77, 77, 0.01) 5%, rgb(56, 11, 99) 20%);   */
+            height: 15vh;
+        }
+            /* @media (max-width: 60rem) {
+                #navbar {
+                    background: linear-gradient(90deg, rgba(77, 77, 77, 0.01) 5%, rgb(56, 11, 99) 25%);;
+                }
+            } */
+            .nav-link {
+                position: relative;
+                right: 5%;
+                padding: 2.25rem 1rem 2.15rem 1rem;
+                /* border: solid rgb(56, 11, 99) 3px;  */
+                border: solid var(--portfolio-blue) 3px;
+                margin: 0 1rem 0 1rem;
+                text-decoration: none;
+                color:rgb(255, 255, 255);
+                font-size: 1.3rem;
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+
+                .nav-link:hover {
+                    border: solid white 3px;
+                    transition: .3s;
+                }
+
+                @media (max-width: 60rem) {
+                    .nav-link {
+                        padding: 2.3rem .5rem 2.1rem .5rem;
+                        margin: 0 .5rem 0 .5rem;
+                        font-size: 1.1rem;
+                        color: rgb(255, 255, 255);
+                    }
+                }
+                    @media (max-width: 45rem) {
+                        .nav-link {
+                            left: 0;
+                        }
+                    }
+
+        .welcome-image { /*WELCOME*/
+            height: 90vh; /* vh = 1% size of viewport (height)*/
+            background-image: url(welcome-image.jpg);
+            background-size: cover;
+            margin-top: -2rem;
+        }
+            @media (max-width: 75rem){
+                .welcome-image {
+                    font-size: 1.3rem;
+                    height: 75vh;
+                    margin-top: -1rem;
+                }
+            }
+
+        .welcome-text {
+            position: relative;
+            top: 33%;
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Monda', sans-serif;
+            color: rgb(185, 253, 121);
+        }
+            @media (max-width: 75rem){
+                    .welcome-text {
+                        font-size: 1.3rem;
+                    }
+                }
+            
+/*================================================================================================ABOUT========================*/
+        .about-button {
+            position: relative;
+            text-align: center;
+            margin: .7rem 0 0 0;
+        }
+
+        #open-btn {
+            width: 100%;
+            display: block;
+            color: white;
+            /* background-color: rgb(56, 11, 99); */
+            background-color: var(--portfolio-blue);
+            padding: 1.6rem;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            font-weight: 600;
+            border: solid rgba(0, 0, 0, 0) 3px;
+        }
+
+            @media (max-width: 60rem) {
+                    #open-btn {
+                        font-size: 1.1rem;
+                }
+            }
+
+            #open-btn:hover {
+                border: solid white 3px;
+                transition: .3s;
+                /* background-color: black; */
+                /* background-color: rgb(56, 11, 99); */
+            }
+
+        #about-content {
+            display: flex;
+            flex-direction: row;
+            margin: .7rem 0 .7rem 0;
+            background-color: var(--portfolio-blue);
+            height: 0;/*param*/
+            width: 100%;
+            /* color: black; */
+            font-size: 1.3rem;
+            font-family: sans-serif;
+            z-index: 1;
+            transition: .5s;
+        }
+
+            @media (max-width: 45rem) {
+                #about-content{
+                    flex-direction: column;
+                    /* align-items: center; */
+                }
+            }
+
+        #about-text {
+            position: relative;
+            top: 23%;
+            left: 10%;
+            width: 46%;
+            /* margin: 2rem; */
+            color: white;
+            font-size: 1.5rem;
+            display: none;
+        }
+            @media (max-width: 60rem) {
+                #about-text {
+                    left: 7%;
+                    font-size: 1.35rem;
+                }
+            }
+
+            @media (max-width: 45rem) {
+                #about-text {
+                    top: 3%;
+                    left: 15%;
+                    width: 75%;
+                    margin: .5rem;
+                    font-size: 1.15rem;
+                    /* height: 90vh; */
+                }
+            }
+
+    #about-image {
+        position: relative;
+        display: none; /*param*/
+        top: 23%;
+        left: 10%;
+        height: 34vh;
+        width: 18%;
+        border-radius: 50%;
+        margin: 2rem;
+        box-shadow: rgb(173, 173, 173) 1px 1px 7px;
+    }
+        /* @media (max-width: 68rem) {
+            #about-image {
+                left: 0;
+                height: 30vh;
+                width: 13%;
+            }
+        } */
+
+        @media (max-width: 68rem) {
+            #about-image {
+                left: 7%;
+                height: 30vh;
+                width: 22%;
+                margin: 2rem 1rem 1rem 1rem;
+            }
+        }                    
+
+            @media (max-width: 45rem) {
+                #about-image {
+                    top: 4%;
+                    left: 26%;
+                    height: 25vh;
+                    width: 43%;
+                    margin: 1.4rem 1rem 1.4rem 1rem;
+                }
+            }
+
+        #close-btn {
+            position: relative;
+            top: 5%;
+            left: 49%;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: none; /*param*/
+            border: solid rgb(255, 255, 255);
+            border-width: 0 5px 5px 0; /*creates arrow*/
+            transform: rotate(225deg); /*creates arrow (direction)*/
+            background-color: rgba(70, 70, 70, 0);
+            padding: 10px;
+        }
+            #close-btn:hover {
+                border: solid rgb(250, 12, 12); 
+                border-width: 0 5px 5px 0;
+            }
+            @media (max-width: 45rem) {
+                    #close-btn {
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        left: 48%;
+                    }
+                }
+
+    
+            
+/*======================================================================================================================PROJECTS-TILE*/
+
+        .project-tile { /*PROJECTS*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 2fr);
+            justify-content: center;
+            /* align-items: center; */
+            margin: 0;
+            gap: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+
+            @media (max-width: 55rem){ 
+                .project-tile{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 2fr;
+                    margin: 1rem 0 0 0;
+                }
+            }
+            
+        .project-tile a {
+            text-decoration: none;
+            /* color: black; */
+            }
+            
+            #project1 {
+                grid-column: 1;
+                grid-row: 1/3;
+                padding: 6rem;
+                background-image: url(project-images/template-site-bg.png);
+                background-size: cover;
+                background-position-y: 40%;
+                /* background-color: cornflowerblue; */
+                text-align: center;
+                color: white;
+                opacity: .9;
+            }
+                @media (max-width: 55rem) {
+                    #project1 {
+                        grid-column: 1;
+                        grid-row: 1/3;
+                    }
+                }
+
+            #project2 {
+                grid-column: 2;
+                grid-row: 1/3;
+                padding: 6rem;
+                background-image: url(project-images/three-headed.jpg);
+                background-size: cover;
+                background-position-y: 40%;
+                text-align: center;
+                color: white;
+                opacity: .9;
+            }
+                @media (max-width: 55rem) {
+                    #project2 {
+                        grid-column: 1;
+                        grid-row: 3/6;
+                    }
+                }
+
+            #project3 {
+                grid-column: 3;
+                grid-row: 1/3;
+                padding: 6rem;
+                background-image: url(project-images/php.jpg);
+                background-size: cover;
+                background-position-y: 51%;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                opacity: .9;
+            }
+                @media (max-width: 55rem) { #project3 {background-position-x: 10%;}}
+                @media (max-width: 55rem) {
+                    #project3 {
+                        grid-column: 1;
+                        grid-row: 6/9;
+                    }
+                }
+
+            #project4 {
+                grid-column: 1;
+                grid-row: 3/5;
+                padding: 6rem;
+                background-image: url(project-images/php-crud.jpg);
+                background-size: cover;
+                /* background-position-y: -5%; */
+                text-align: center;
+                color: rgb(0, 0, 0);
+                text-shadow: 1px 1px 16px white; /*text shadow*/
+                opacity: .9;
+            }
+                @media (max-width: 55rem) { #project4 {background-position-x: 40%;}}
+                @media (max-width: 55rem) {
+                    #project4 {
+                        grid-column: 1;
+                        grid-row: 9/12;
+                    }
+                }
+
+            #work-link {
+                grid-column: 2;
+                grid-row: 3/5;
+                padding: 6rem;
+                background-image: url(project-images/github.jpg);
+                background-size: cover;
+                /* background-position-y: 18%; */
+                text-align: center;
+                color: white;
+                opacity: .9;
+            }
+
+                /* @media (max-width: 55rem) { #work-link {background-position-x: 60%;}} */
+                @media (max-width: 55rem){
+                    #work-link {
+                        grid-column: 1; 
+                        grid-row: 15/18
+                    }
+                }
+
+
+            #project5 {
+                grid-column: 3;
+                grid-row: 3/5;
+                padding: 6rem;
+                background-image: url(project-images/php-login.jpg);
+                background-size: cover;
+                background-position-y: 51%;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                text-shadow: 1px 1px 16px white; /*text shadow*/
+                opacity: .9;
+            }
+                @media (max-width: 55rem) { #project5 {background-position-x: 60%;}}
+                @media (max-width: 55rem) {
+                    #project5 {
+                        grid-column: 1;
+                        grid-row: 12/15;
+                    }
+                }
+            
+                #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #work-link:hover {
+                    opacity: 1;
+                    animation-name: zoom;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                    @keyframes zoom {
+                        0% { transform: scale(1.0035);}
+                        100% { transform: scale(1.05);}
+                    }
+            
+        #signature {text-align: center; font-size: .9rem; color: rgb(56, 11, 99); margin: 1rem;}
+        
+    </style>
+
+</head>
+<body>
+    <div class="navbar-bg">
+        <nav id="navbar"> <!--NAVBAR-->
+            <a class="nav-link" href="#about-pos">About</a>
+            <a class="nav-link" href="#work-link">My Work</a>
+            <a class="nav-link" href="https://www.upwork.com/freelancers/~01c3683d82db31cfe6" target="_blank">Contact</a>
+        </nav>
+    </div>
+
+    <div class="welcome-image"> <!--WELCOME-->
+        <div class="welcome-text">
+        <h1>Greetings, I am Miguel.</h1>
+        <p class="welcome-subtext">Web Developer for <span>Hire<a id="about-pos"></a></span></p>
+        </div>
+    </div>
+
+    <div class="about-button">
+        <button id="open-btn">About Me</button>
+    </div>
+
+    <div id="about-content">
+        <button id="close-btn"></button>
+        <img src="about-image.jpg" id="about-image" alt="about image">
+        <p id="about-text">
+            Thank you for stopping by!<br> <br> I like to develop functional, responsive websites. Always looking forward to a new project to
+            tackle. Let me help your business grow! <br> <br>Professional and reliable.
+        </p>
+    </div>
+
+    <section id="projects"><!--PROJECTS-->
+        <div class="project-tile">
+            <a id="project1" href="https://samouchka1.github.io/model-site/model-site/index.html" target="_blank">Model site</a>
+            <a id="project2" href="https://samouchka1.github.io/dragon-site/dragon-site/index.html" target="_blank">Dragon theme</a>
+            <a id="project3" href="http://samouchka.great-site.net/index.php" target="_blank">PHP Components site</a>
+            <a id="project4" href="http://crudproject.great-site.net/index.php" target="_blank">PHP CRUD App</a>
+            <a id="project5" href="http://loginsystem.great-site.net/" target="_blank">PHP Login System</a>
+            <a id="work-link" href="https://github.com/samouchka1" target="_blank">Github</a>
+        </div>
+    </section>
+
+    <p id="signature">&copy;<script>document.write(new Date().getFullYear());</script> samouchka</p> <!--signature-->
+
+    <script>
+
+        const aboutContent = document.getElementById("about-content");
+        const aboutText = document.getElementById("about-text");
+        const aboutImage = document.getElementById("about-image");
+
+        const openBtn = document.getElementById("open-btn");
+        openBtn.addEventListener("click", openAbout);
+
+        function openAbout() {
+            aboutContent.style.height = "71vh";
+            aboutContent.style.backgroundColor = "rgb(13, 40, 90)";
+            closeBtn.style.display = "block";
+            openBtn.style.display = "none";
+
+            setTimeout(function(){
+            aboutText.style.display = "block",
+            aboutImage.style.display = "block"}, 350)
+        }
+
+        const closeBtn = document.getElementById("close-btn");
+        closeBtn.addEventListener("click", closeAbout);
+
+        function closeAbout() {
+            aboutContent.style.height = "0";
+            aboutContent.style.backgroundColor = "black";
+            closeBtn.style.display = "none";
+            openBtn.style.display = "block";
+
+            aboutText.style.display = "none";
+            aboutImage.style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
