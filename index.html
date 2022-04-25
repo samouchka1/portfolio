@@ -251,7 +251,7 @@
         .project-tile { /*PROJECTS*/
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(5, 2fr);
+            grid-template-rows: repeat(6, 2fr);
             justify-content: center;
             /* align-items: center; */
             margin: 0;
@@ -350,21 +350,21 @@
                     }
                 }
 
-            #work-link {
+            #project6 { /*===============================================WORKING ON THIS */
                 grid-column: 2;
                 grid-row: 3/5;
                 padding: 6rem;
-                background-image: url(project-images/github.jpg);
+                background-image: url(project-images/react-todo-bg.jpg);
                 background-size: cover;
                 /* background-position-y: 18%; */
                 text-align: center;
-                color: white;
+                color: rgb(0, 0, 0);
                 opacity: .9;
             }
 
-                /* @media (max-width: 55rem) { #work-link {background-position-x: 60%;}} */
+                @media (max-width: 55rem) { #project6 {background-position-x: 40%;}}
                 @media (max-width: 55rem){
-                    #work-link {
+                    #project6 {
                         grid-column: 1; 
                         grid-row: 15/18
                     }
@@ -390,8 +390,29 @@
                         grid-row: 12/15;
                     }
                 }
+
+            #work-link {
+                grid-column: 2;
+                grid-row: 5/7;
+                padding: 6rem;
+                background-image: url(project-images/github.jpg);
+                background-size: cover;
+                /* background-position-y: 18%; */
+                text-align: center;
+                color: white;
+                opacity: .9;
+            }
+
+                /* @media (max-width: 55rem) { #work-link {background-position-x: 60%;}} */
+                @media (max-width: 55rem){
+                    #work-link {
+                        grid-column: 1; 
+                        grid-row: 18/21
+                    }
+                }
+
             
-                #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #work-link:hover {
+                #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #project6:hover, #work-link:hover {
                     opacity: 1;
                     animation-name: zoom;
                     animation-duration: 1s;
@@ -443,6 +464,7 @@
             <a id="project3" href="http://samouchka.great-site.net/index.php" target="_blank">PHP Components site</a>
             <a id="project4" href="http://crudproject.great-site.net/index.php" target="_blank">PHP CRUD App</a>
             <a id="project5" href="http://loginsystem.great-site.net/" target="_blank">PHP Login System</a>
+            <a id="project6" href="https://todo-list-react-12.netlify.app/" target="_blank">To-do app using React</a>
             <a id="work-link" href="https://github.com/samouchka1" target="_blank">Github</a>
         </div>
     </section>
