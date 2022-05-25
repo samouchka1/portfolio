@@ -33,11 +33,7 @@
             /* background: linear-gradient(90deg, rgba(77, 77, 77, 0.01) 5%, rgb(56, 11, 99) 20%);   */
             height: 15vh;
         }
-            /* @media (max-width: 60rem) {
-                #navbar {
-                    background: linear-gradient(90deg, rgba(77, 77, 77, 0.01) 5%, rgb(56, 11, 99) 25%);;
-                }
-            } */
+
             .nav-link {
                 position: relative;
                 right: 5%;
@@ -119,17 +115,9 @@
             border: solid rgba(0, 0, 0, 0) 3px;
         }
 
-            @media (max-width: 60rem) {
-                    #open-btn {
-                        font-size: 1.1rem;
-                }
-            }
-
             #open-btn:hover {
                 border: solid white 3px;
                 transition: .3s;
-                /* background-color: black; */
-                /* background-color: rgb(56, 11, 99); */
             }
 
         #about-content {
@@ -149,73 +137,54 @@
             @media (max-width: 45rem) {
                 #about-content{
                     flex-direction: column;
-                    /* align-items: center; */
                 }
             }
 
         #about-text {
             position: relative;
-            top: 23%;
-            left: 10%;
-            width: 46%;
-            /* margin: 2rem; */
+            top: 18%;
+            padding: 1rem;
             color: white;
             font-size: 1.5rem;
             display: none;
         }
             @media (max-width: 60rem) {
                 #about-text {
-                    left: 7%;
-                    font-size: 1.35rem;
+                    top: 9%;
                 }
             }
 
             @media (max-width: 45rem) {
                 #about-text {
                     top: 3%;
-                    left: 15%;
-                    width: 75%;
-                    margin: .5rem;
+                    padding: 1rem 2rem 1rem 2rem;
                     font-size: 1.15rem;
-                    /* height: 90vh; */
                 }
             }
 
     #about-image {
         position: relative;
         display: none; /*param*/
-        top: 23%;
-        left: 10%;
         height: 34vh;
-        width: 18%;
+        width: auto;
         border-radius: 50%;
-        margin: 2rem;
+        margin: auto 2rem auto 2rem;
         box-shadow: rgb(173, 173, 173) 1px 1px 7px;
     }
-        /* @media (max-width: 68rem) {
-            #about-image {
-                left: 0;
-                height: 30vh;
-                width: 13%;
-            }
-        } */
 
         @media (max-width: 68rem) {
             #about-image {
-                left: 7%;
-                height: 30vh;
-                width: 22%;
-                margin: 2rem 1rem 1rem 1rem;
+                margin: auto .5rem auto .5rem;   
             }
         }                    
 
             @media (max-width: 45rem) {
                 #about-image {
-                    top: 4%;
-                    left: 26%;
+                    top: 6%;
                     height: 25vh;
-                    width: 43%;
-                    margin: 1.4rem 1rem 1.4rem 1rem;
+                    width: auto;
+                    margin: auto;
+                    
                 }
             }
 
@@ -253,7 +222,6 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(6, 2fr);
             justify-content: center;
-            /* align-items: center; */
             margin: 0;
             gap: 1rem;
             font-size: 2rem;
@@ -271,7 +239,6 @@
             
         .project-tile a {
             text-decoration: none;
-            /* color: black; */
             }
             
             #project1 {
@@ -281,7 +248,6 @@
                 background-image: url(project-images/template-site-bg.png);
                 background-size: cover;
                 background-position-y: 40%;
-                /* background-color: cornflowerblue; */
                 text-align: center;
                 color: white;
                 opacity: .9;
@@ -391,6 +357,26 @@
                     }
                 }
 
+            #wp-1 {
+                grid-column: 1;
+                grid-row: 5/7;
+                padding: 6rem;
+                background-image: url(project-images/wp-1.jpg);
+                background-size: cover;
+                /* background-position-y: 18%; */
+                text-align: center;
+                color: white;
+                opacity: .9;
+            }
+
+                /* @media (max-width: 55rem) { #work-link {background-position-x: 60%;}} */
+                @media (max-width: 55rem){
+                    #wp-1 {
+                        grid-column: 1; 
+                        grid-row: 18/21
+                    }
+                }
+
             #work-link {
                 grid-column: 2;
                 grid-row: 5/7;
@@ -407,12 +393,12 @@
                 @media (max-width: 55rem){
                     #work-link {
                         grid-column: 1; 
-                        grid-row: 18/21
+                        grid-row: 21/24
                     }
                 }
 
             
-                #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #project6:hover, #work-link:hover {
+                #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #project6:hover, #wp-1:hover, #work-link:hover {
                     opacity: 1;
                     animation-name: zoom;
                     animation-duration: 1s;
@@ -452,19 +438,20 @@
         <button id="close-btn"></button>
         <img src="about-image.jpg" id="about-image" alt="about image">
         <p id="about-text">
-            Thank you for stopping by!<br> <br> I like to develop functional, responsive websites. Always looking forward to a new project to
+            Thank you for stopping by!<br> <br> I like to develop functional, responsive websites. Strongly familiar with HTML, CSS, JavaScript and PHP. Experience with MySQL, MongoDB/Mongoose, ExpressJS. Knowledge in ReactJS, PHP Laravel, WordPress and installing, working with frameworks and libraries. <br>I'm always looking forward to a new project to
             tackle. Let me help your business grow! <br> <br>Professional and reliable.
         </p>
     </div>
 
     <section id="projects"><!--PROJECTS-->
         <div class="project-tile">
-            <a id="project1" href="https://samouchka1.github.io/model-site/index.html" target="_blank">Model site</a>
+            <a id="project1" href="https://samouchka1.github.io/model-site/index.html" target="_blank">Sample</a>
             <a id="project2" href="https://samouchka1.github.io/dragon-site/index.html" target="_blank">Dragon theme</a>
-            <a id="project3" href="http://samouchka.great-site.net/index.php" target="_blank">PHP Components site</a>
+            <a id="project3" href="http://samouchka.great-site.net/index.php" target="_blank">PHP templates</a>
             <a id="project4" href="http://crudproject.great-site.net/index.php" target="_blank">PHP CRUD App</a>
             <a id="project5" href="http://loginsystem.great-site.net/" target="_blank">PHP Login System</a>
-            <a id="project6" href="https://todo-list-react-12.netlify.app/" target="_blank">To-do app using React</a>
+            <a id="project6" href="https://todo-list-react-12.netlify.app/" target="_blank">To-do app React</a>
+            <a id="wp-1" href="http://site2wordpress.iceiy.com/" target="__blank">Wordpress site</a>
             <a id="work-link" href="https://github.com/samouchka1" target="_blank">Github</a>
         </div>
     </section>
@@ -481,7 +468,7 @@
         openBtn.addEventListener("click", openAbout);
 
         function openAbout() {
-            aboutContent.style.height = "71vh";
+            aboutContent.style.height = "78vh";
             aboutContent.style.backgroundColor = "rgb(13, 40, 90)";
             closeBtn.style.display = "block";
             openBtn.style.display = "none";
